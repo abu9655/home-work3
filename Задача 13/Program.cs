@@ -1,10 +1,12 @@
-﻿//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-//645 -> 5
-//78 -> третьей цифры нет
-//32679 -> 6
-Console.Write("Введи число: ");
-int Number = Convert.ToInt32(Console.ReadLine());
-string anyNumberText = Convert.ToString(Number);
-if (anyNumberText.Length > 2)
+﻿// Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+int A1 = Convert.ToInt32(Console.ReadLine());
+int B1 = Convert.ToInt32(Console.ReadLine());
+int C1= Convert.ToInt32(Console.ReadLine());
+int A2 = Convert.ToInt32(Console.ReadLine());
+int B2 = Convert.ToInt32(Console.ReadLine());
+int C2 = Convert.ToInt32(Console.ReadLine());
 
-    Console.Write("третья цифра " + anyNumberText[2]);
+double distance = Math.Round(Math.Sqrt(Math.Pow(A1 - A2, 2) + Math.Pow(B1 - B2, 2)+Math.Pow(C1 - C2, 2)), 2);
+Console.WriteLine(distance);

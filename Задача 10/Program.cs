@@ -1,12 +1,19 @@
-﻿//Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿//Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+//14212 -> нет
+//12821 -> да
+//23432 -> да
 
-//456 -> 5
-//782 -> 8
-//918 -> 1
+Console.Write("Введите номер плоскости : ");
+string input = Console.ReadLine();
+char[] inputarray = input.ToCharArray();
+Array.Reverse(inputarray);
+string output = new string(inputarray);
 
-Console.Write("Введите трёхзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int digit1 = number/100;
-int o = number-digit1*100;
-int c = o/10;
-Console.Write(c);
+if (output == input)
+{
+    Console.WriteLine("да");
+}
+else
+{
+    Console.WriteLine("нет");
+}
